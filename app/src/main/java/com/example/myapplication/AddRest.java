@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 
 import java.io.IOException;
+import java.util.UUID;
 
 public class AddRest extends AppCompatActivity {
 
@@ -29,6 +30,7 @@ public class AddRest extends AppCompatActivity {
     private Spinner spCat;
     private ImageView ivPhoto;
     private FireBaseServices fbs;
+    private String StorageCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class AddRest extends AppCompatActivity {
         etName = findViewById(R.id.etNameAddRest);
         etDesc = findViewById(R.id.etDescriptionAddRest);
         etLocation = findViewById(R.id.etLocationAddRest);
+        StorageCode = "images/"+ UUID.randomUUID().toString();
 
         spCat = findViewById(R.id.spRestCatAddRest);
         ivPhoto = findViewById(R.id.ivPhotoAddRest);
@@ -55,12 +58,12 @@ public class AddRest extends AppCompatActivity {
         String name, description, Location, phone, category, photo;
         name = etName.getText().toString();
         description = etDesc.getText().toString();
-        Location = etLocation.getText().toString();
+        Location = etLocation.getText().toString() ;
         phone = etPhone.getText().toString();
         category = spCat.getSelectedItem().toString();
         if (ivPhoto.getDrawable() == null)
             photo = "no_image";
-        else photo = ivPhoto.getDrawable().toString();
+        else photo = StorageCode;
 
         if (name.trim().isEmpty() || description.trim().isEmpty() || Location.trim().isEmpty() ||
                 phone.trim().isEmpty() || category.trim().isEmpty() || photo.trim().isEmpty()) {

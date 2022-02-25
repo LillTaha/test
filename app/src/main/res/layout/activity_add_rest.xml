@@ -15,30 +15,31 @@
         android:layout_marginBottom="9dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="restaurant description..."
+        android:hint="Plant Description..."
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/etLocationAddRest"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNameAddRest" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.278" />
+
 
     <EditText
         android:id="@+id/etLocationAddRest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="73dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:hint="address..."
+        android:hint="Location..."
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/spRestCatAddRest"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDescriptionAddRest"
-        app:layout_constraintVertical_bias="0.366" />
+        app:layout_constraintVertical_bias="0.189" />
 
     <EditText
         android:id="@+id/etNameAddRest"
@@ -51,24 +52,10 @@
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintHorizontal_bias="0.427"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
-
-    <EditText
-        android:id="@+id/etPhoneAddRest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ems="10"
-        android:hint="phone..."
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/spRestCatAddRest"
-        app:layout_constraintTop_toBottomOf="@+id/spRestCatAddRest"
-        app:layout_constraintVertical_bias="0.313" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <Spinner
         android:id="@+id/spRestCatAddRest"
@@ -86,12 +73,13 @@
         android:id="@+id/ivPhotoAddRest"
         android:layout_width="72dp"
         android:layout_height="88dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/addimage"
-        android:contentDescription="Restaurant Logo"
+        android:contentDescription="plant "
         android:onClick="selectPhoto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPhoneAddRest"
         app:layout_constraintVertical_bias="1.0" />
@@ -106,6 +94,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/ivPhotoAddRest"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.752" />
+        app:layout_constraintVertical_bias="0.672" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
